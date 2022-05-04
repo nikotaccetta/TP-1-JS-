@@ -1,0 +1,89 @@
+<head>
+    <title>Calculadora de bolsillo</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+            <div class="window">
+                <h2>Presupuesto Mensual</h2>
+                <div class="budget-feedback">Mensaje de alerta</div>
+                <div class="cont cont-budget">
+                    <form id="budget-form" class="budget-form" action="submit">
+                    <h3>Ingresos</h3>
+                    <p>Por favor, introduzca el valor de su ingreso:</p>
+                    <div class="form-group">
+                        <input type="number" class="form-control budget-input" id="budget-input">
+                        <!-- Boton ingreso -->
+                        <button type="submit" class="btn budget-submit btn-budget"
+                            id="budget-submit">Ingresar</button>
+                    
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Egresos -->
+                <div class="expense-feedback">Mensaje de alerta</div>
+                <div class="cont cont-expense">
+                    <form id="expense-form" class="expense-form" action="submit">
+                    <h3>Egresos</h3>
+                    <p>Introduzca el nombre de su egreso:</p>
+                    <input type="text" class="form-control expense-input" id="expense-input">
+                    <p>Ahora digita el valor de tu egreso:</p>
+                    <div class="form-group">
+                        <input type="number" class="form-control expense-input" id="amount-input">
+                        <!-- Boton egreso -->
+                        <button type="submit" class="btn expense-submit btn-expense"
+                            id="budget-submit">Ingresar</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Total -->
+            <div class="window">
+                <h2>Total</h2>
+                <div class="results">
+                    <div class="result result-balance">
+                        <div class="value">
+                            <h4>Balance</h4>
+                            <h4 class="balance" id="balance"> <span>$ </span><span
+                                    id="balance-amount">0</span></h4>
+                        </div>
+                        <span class="balance-icon"><i class='fas fa-money-bill-wave'></i></span>
+                    </div>
+
+                    <div class="result result-budget">
+                            <h4>Ingresos</h4>
+                            <h4 class="balance" id="budget"> <span>$ </span><span
+                                    id="budget-amount">0</span></h4>
+                    </div>
+
+                    <div class="result result-expense">
+                            <h4>Egresos</h4>
+                            <h4 class="balance" id="expense"> <span>$ </span><span
+                                    id="expense-amount">0</span></h4>
+                    </div>
+                </div>
+
+                <!-- Lista -->
+                <div class="expense-list" id="expense-list">
+
+                    <div class="expense expense-list__info">
+                        <h5 class="list-item">Nombre</h5>
+                        <h5 class="list-item">Valor</h5>
+                        <h5 class="list-item">Acciones</h5>
+                    </div>                   
+                </div>
+
+            </div>
+
+    </div>
+    </div>
+    </div>
+    <script src="js/site.js"></script>
+</body>
